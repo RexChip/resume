@@ -1,0 +1,516 @@
+@import 'setting';
+@import 'media';
+
+$blue: #457081;
+
+// 共用區塊
+* {
+  position: relative;
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    position: relative;
+    box-sizing: border-box;
+  }
+}
+
+svg.circle {
+  width: 50px;
+  height: 50px;
+  stroke-dashoffset: 125.66;
+  transform: rotate(-90deg);
+  transition: all 0.5s;
+}
+
+.title {
+  display: inline-block;
+  font-family: $f04;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+}
+
+.bottomLine {
+  display: inline-block;
+
+  margin: {
+    bottom: 30px;
+  }
+
+  padding: {
+    bottom: 14px;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: $blue;
+  }
+}
+
+// main
+.resume {
+  padding: {
+    top: 60px;
+    left: 20px;
+    right: 20px;
+    bottom: 60px;
+  }
+
+  > div {
+    width: 100%;
+    max-width: 900px;
+
+    margin: {
+      left: auto;
+      right: auto;
+    }
+
+    padding: {
+      bottom: 60px;
+    }
+
+    @include media(480px) {
+      padding: {
+        bottom: 40px;
+      }
+    }
+  }
+
+  .infoArea {
+    @include media(780px) {
+      padding: {
+        bottom: 40px;
+      }
+    }
+
+    @include media(480px) {
+      padding: {
+        bottom: 20px;
+      }
+    }
+  }
+
+  .mainSkillBox {
+    @include media(480px) {
+      padding: {
+        bottom: 20px;
+      }
+    }
+  }
+
+  .name {
+    position: relative;
+
+    span {
+      &:before {
+        content: '黃宥翔';
+        font-family: $f04;
+        font-size: 30px;
+        letter-spacing: 0.05em;
+      }
+
+      &:after {
+        content: 'j19920727@gmail.com';
+        position: absolute;
+        left: calc(100% + 20px);
+        bottom: 5px;
+        font-family: $f01;
+        font-size: 18px;
+        letter-spacing: 0.05em;
+      }
+    }
+  }
+}
+
+.skillBox {
+  display: flex;
+  flex-wrap: wrap;
+
+  > div {
+    width: 16.66%;
+    text-align: center;
+
+    @include media(780px) {
+      width: 33.33%;
+
+      padding: {
+        bottom: 20px;
+      }
+    }
+
+    @include media(480px) {
+      width: 50%;
+    }
+  }
+
+  .skillName {
+    font-family: $f01;
+    letter-spacing: 0.05em;
+
+    padding: {
+      top: 10px;
+      left: 5px;
+      right: 5px;
+    }
+  }
+}
+
+// skill
+.mainSkillBox {
+  font-family: $f01;
+  letter-spacing: 0.04em;
+  font-size: 14px;
+  line-height: 24px;
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+
+    > div {
+      width: 33.33%;
+
+      padding: {
+        right: 10px;
+      }
+
+      @include media(480px) {
+        width: 50%;
+
+        padding: {
+          bottom: 20px;
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-size: 24px;
+
+    padding: {
+      bottom: 10px;
+    }
+  }
+}
+
+// experience
+.experienceArea {
+  .row {
+    h3 {
+      &:before {
+        content: '愛貝斯網路 - 前端工程師';
+        font-family: $f04;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 0.04em;
+      }
+
+      padding: {
+        bottom: 20px;
+      }
+    }
+
+    .text {
+      font-family: $f03;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+// demo
+.demoArea {
+  > .top {
+    font-family: $f01;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+  }
+}
+
+.demoList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: start;
+  user-select: none;
+
+  li {
+    position: relative;
+    width: 33.33%;
+    perspective: 1000px;
+
+    margin: {
+      // left: -10px;
+      // right: -10px;
+      bottom: 10px;
+    }
+
+    padding: {
+      // top: 20%;
+      left: 10px;
+      right: 10px;
+    }
+
+    @include media(780px) {
+      width: 50%;
+
+      padding: {
+        // top: 30%;
+      }
+    }
+
+    @include media(640px) {
+      width: 100%;
+
+      // padding: {
+      //   top: 60%;
+      // }
+    }
+
+    &:hover {
+      @include media(-641px) {
+        .item {
+          transform: rotateX(30deg) rotateY(-25deg) rotateZ(5deg);
+
+          &:after {
+            top: 20px;
+            left: 20px;
+          }
+        }
+      }
+    }
+
+    > a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+
+  .item {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 90%;
+    // height: 90%;
+    min-height: 190px;
+    transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+    background-color: #fff;
+    cursor: pointer;
+    z-index: 1;
+
+    &.one {
+      &:before {
+        border-color: #d7a297;
+      }
+
+      &:after {
+        background-color: rgba(#d7a297, 0.6);
+      }
+    }
+
+    &.two {
+      &:before {
+        border-color: #000;
+        background-color: #000;
+      }
+
+      &:after {
+        background-color: rgba(#000, 0.6);
+      }
+    }
+
+    &.three {
+      &:before {
+        border-color: #00adba;
+      }
+
+      &:after {
+        background-color: rgba(#00adba, 0.6);
+      }
+    }
+
+    &.four {
+      &:before {
+        border-color: #37586b;
+      }
+
+      &:after {
+        background-color: rgba(#37586b, 0.6);
+      }
+
+      .demoName {
+        &:before {
+          content: '清水建築工坊';
+          font-family: $f04;
+          font-size: 20px;
+          letter-spacing: 0.1em;
+          color: #111;
+        }
+      }
+    }
+
+    &.five {
+      &:before {
+        border-color: #31b4ae;
+      }
+
+      &:after {
+        background-color: rgba(#31b4ae, 0.6);
+      }
+
+      img {
+        width: 200px;
+      }
+    }
+
+    &.six {
+      &:before {
+        border-color: #20255f;
+      }
+
+      &:after {
+        background-color: rgba(#20255f, 0.6);
+      }
+    }
+
+    &.seven {
+      &:before {
+        border-color: #f16377;
+      }
+
+      &:after {
+        background-color: rgba(#f16377, 0.6);
+      }
+
+      .demoName {
+        &:before {
+          content: '兔兔不哭';
+          font-family: $f04;
+          font-size: 20px;
+          letter-spacing: 0.1em;
+          color: #111;
+        }
+      }
+    }
+
+    &.eight {
+      &:before {
+        border-color: #e8bb7e;
+      }
+
+      &:after {
+        background-color: rgba(#e8bb7e, 0.6);
+      }
+
+      .demoName {
+        &:before {
+          content: '余舍行旅';
+          font-family: $f04;
+          font-size: 20px;
+          letter-spacing: 0.1em;
+          color: #111;
+        }
+      }
+    }
+
+    &.nine {
+      &:before {
+        border-color: #f4ba00;
+      }
+
+      &:after {
+        background-color: rgba(#f4ba00, 0.6);
+      }
+
+      .demoName {
+        &:before {
+          content: '西門航棧商旅';
+          font-family: $f04;
+          font-size: 20px;
+          letter-spacing: 0.1em;
+          color: #111;
+        }
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+      background-color: #fff;
+      border: solid 4px #457081;
+      z-index: -1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+      background: #0086bb;
+      z-index: -2;
+    }
+  }
+
+  .demoName {
+    font-family: $f04;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #111;
+  }
+
+  .demoExp {
+    font-family: $f04;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+
+    padding: {
+      top: 30px;
+      bottom: 10px;
+    }
+
+    @include media(640px) {
+      padding: {
+        top: 10px;
+      }
+    }
+  }
+
+  .icon- {
+    &isabelle {
+      fill: #d7a297;
+      width: 150px;
+    }
+
+    &tnchateau {
+      width: 150px;
+    }
+
+    &novotel {
+      width: 180px;
+    }
+  }
+}

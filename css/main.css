@@ -1,0 +1,461 @@
+@charset "UTF-8";
+.test {
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 200px) and (max-width: 1920px) {
+  .test {
+    background-color: blue;
+  }
+}
+
+* {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+svg.circle {
+  width: 50px;
+  height: 50px;
+  stroke-dashoffset: 125.66;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.title {
+  display: inline-block;
+  font-family: "Roboto", "Noto Sans TC", serif;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+}
+
+.bottomLine {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding-bottom: 14px;
+}
+
+.bottomLine:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: #457081;
+}
+
+.resume {
+  padding-top: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 60px;
+}
+
+.resume > div {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 480px) {
+  .resume > div {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 780px) {
+  .resume .infoArea {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume .infoArea {
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume .mainSkillBox {
+    padding-bottom: 20px;
+  }
+}
+
+.resume .name {
+  position: relative;
+}
+
+.resume .name span:before {
+  content: '黃宥翔';
+  font-family: "Roboto", "Noto Sans TC", serif;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+}
+
+.resume .name span:after {
+  content: 'j19920727@gmail.com';
+  position: absolute;
+  left: calc(100% + 20px);
+  bottom: 5px;
+  font-family: "Roboto", serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+}
+
+.skillBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.skillBox > div {
+  width: 16.66%;
+  text-align: center;
+}
+
+@media (max-width: 780px) {
+  .skillBox > div {
+    width: 33.33%;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .skillBox > div {
+    width: 50%;
+  }
+}
+
+.skillBox .skillName {
+  font-family: "Roboto", serif;
+  letter-spacing: 0.05em;
+  padding-top: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.mainSkillBox {
+  font-family: "Roboto", serif;
+  letter-spacing: 0.04em;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.mainSkillBox .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.mainSkillBox .row > div {
+  width: 33.33%;
+  padding-right: 10px;
+}
+
+@media (max-width: 480px) {
+  .mainSkillBox .row > div {
+    width: 50%;
+    padding-bottom: 20px;
+  }
+}
+
+.mainSkillBox h3 {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.experienceArea .row h3 {
+  padding-bottom: 20px;
+}
+
+.experienceArea .row h3:before {
+  content: '愛貝斯網路 - 前端工程師';
+  font-family: "Roboto", "Noto Sans TC", serif;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.experienceArea .row .text {
+  font-family: "Noto Sans TC", serif;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+}
+
+.demoArea > .top {
+  font-family: "Roboto", serif;
+  font-size: 30px;
+  letter-spacing: 0.05em;
+}
+
+.demoList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-self: start;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.demoList li {
+  position: relative;
+  width: 33.33%;
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (max-width: 780px) {
+  .demoList li {
+    width: 50%;
+  }
+}
+
+@media (max-width: 640px) {
+  .demoList li {
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) {
+  .demoList li:hover .item {
+    -webkit-transform: rotateX(30deg) rotateY(-25deg) rotateZ(5deg);
+    transform: rotateX(30deg) rotateY(-25deg) rotateZ(5deg);
+  }
+  .demoList li:hover .item:after {
+    top: 20px;
+    left: 20px;
+  }
+}
+
+.demoList li > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.demoList .item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 190px;
+  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.demoList .item.one:before {
+  border-color: #d7a297;
+}
+
+.demoList .item.one:after {
+  background-color: rgba(215, 162, 151, 0.6);
+}
+
+.demoList .item.two:before {
+  border-color: #000;
+  background-color: #000;
+}
+
+.demoList .item.two:after {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.demoList .item.three:before {
+  border-color: #00adba;
+}
+
+.demoList .item.three:after {
+  background-color: rgba(0, 173, 186, 0.6);
+}
+
+.demoList .item.four:before {
+  border-color: #37586b;
+}
+
+.demoList .item.four:after {
+  background-color: rgba(55, 88, 107, 0.6);
+}
+
+.demoList .item.four .demoName:before {
+  content: '清水建築工坊';
+  font-family: "Roboto", "Noto Sans TC", serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: #111;
+}
+
+.demoList .item.five:before {
+  border-color: #31b4ae;
+}
+
+.demoList .item.five:after {
+  background-color: rgba(49, 180, 174, 0.6);
+}
+
+.demoList .item.five img {
+  width: 200px;
+}
+
+.demoList .item.six:before {
+  border-color: #20255f;
+}
+
+.demoList .item.six:after {
+  background-color: rgba(32, 37, 95, 0.6);
+}
+
+.demoList .item.seven:before {
+  border-color: #f16377;
+}
+
+.demoList .item.seven:after {
+  background-color: rgba(241, 99, 119, 0.6);
+}
+
+.demoList .item.seven .demoName:before {
+  content: '兔兔不哭';
+  font-family: "Roboto", "Noto Sans TC", serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: #111;
+}
+
+.demoList .item.eight:before {
+  border-color: #e8bb7e;
+}
+
+.demoList .item.eight:after {
+  background-color: rgba(232, 187, 126, 0.6);
+}
+
+.demoList .item.eight .demoName:before {
+  content: '余舍行旅';
+  font-family: "Roboto", "Noto Sans TC", serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: #111;
+}
+
+.demoList .item.nine:before {
+  border-color: #f4ba00;
+}
+
+.demoList .item.nine:after {
+  background-color: rgba(244, 186, 0, 0.6);
+}
+
+.demoList .item.nine .demoName:before {
+  content: '西門航棧商旅';
+  font-family: "Roboto", "Noto Sans TC", serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: #111;
+}
+
+.demoList .item:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  background-color: #fff;
+  border: solid 4px #457081;
+  z-index: -1;
+}
+
+.demoList .item:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  -o-transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
+  background: #0086bb;
+  z-index: -2;
+}
+
+.demoList .demoName {
+  font-family: "Roboto", "Noto Sans TC", serif;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  color: #111;
+}
+
+.demoList .demoExp {
+  font-family: "Roboto", "Noto Sans TC", serif;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+@media (max-width: 640px) {
+  .demoList .demoExp {
+    padding-top: 10px;
+  }
+}
+
+.demoList .icon-isabelle {
+  fill: #d7a297;
+  width: 150px;
+}
+
+.demoList .icon-tnchateau {
+  width: 150px;
+}
+
+.demoList .icon-novotel {
+  width: 180px;
+}
